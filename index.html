@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Todo List</h1>
+    <p class="subtitle">Add your daily tasks and mark them done.</p>
+
+    <form id="todoForm" class="todo-form">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="active">Active</button>
+        <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <button type="button" id="clearCompletedBtn" class="clear-btn">Clear Completed</button>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div class="footer">
+      <span id="remainingCount">0 tasks left</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
